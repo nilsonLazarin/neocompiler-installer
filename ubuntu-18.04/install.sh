@@ -8,11 +8,11 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] 
 
 echo "atualizando lista de repositórios"
 sudo apt update
-sudo apt install -y git apt-transport-https ca-certificates curl gnupg lsb-release docker-ce docker-ce-cli containerd.io python3-pip
+sudo apt install -y git apt-transport-https ca-certificates curl gnupg lsb-release docker-ce docker-ce-cli containerd.io python3-pip docker-compose
 sudo groupadd docker
 sudo adduser $(whoami) docker
 
-python -m pip3 install -U pip setuptools
+python3 -m pip install -U pip setuptools
 sudo pip3 install docker-compose
 
 echo "Download"
